@@ -2,6 +2,7 @@ package pl.pawellukaszewski.ReportBugApp.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.NotBlank;
 import pl.pawellukaszewski.ReportBugApp.models.forms.TicketForm;
 
 
