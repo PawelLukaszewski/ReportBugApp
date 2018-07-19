@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</br>
+<center><span th:text="${info}"></span></center>
+<center><span th:text="${infoLoginError}" th:style="'color: red'"></span></center>
+</br>
+<center>
+    <div class="container">
+        <center><span><h1>Witamy w systemie Logowania</h1></span></center>
+<form th:action="@{/}" method="post" th:object="${loginForm}">
+    <div class="row">
+        <div class="col-25">
+            <label>Login:</label>
+            <br>
+    <span th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></span>
+        </div>
+        <div class="col-75">
+    <input placeholder="Login" type="text" th:field="*{login}">
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-25">
+                <label>Password:</label>
+                <br>
+                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+         </div>
+        <div class="col-75">
+            <input placeholder="Password" type="password" th:field="*{password}">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <input type="submit"  value="send" >
+    </div>
+
+</form>
+    </div>
+
+
+
+</center>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=password], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    font-size: 20px;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+width: 70%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+
+</style>
+</body>
+</html>

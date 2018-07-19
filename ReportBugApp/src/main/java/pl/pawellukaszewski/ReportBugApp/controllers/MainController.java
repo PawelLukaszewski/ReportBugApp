@@ -20,18 +20,20 @@ public class MainController {
     TicketRepository ticketRepository;
 
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index(Model model) {
         model.addAttribute("ticketForm", new TicketForm());
         return "index";
     }
 
-    @PostMapping("/")
+    @PostMapping("/index")
     public String index(@ModelAttribute("ticketForm")@Valid TicketForm form, BindingResult result, Model model) {
         if (result.hasErrors()){
             return "index";
+        }else{
+            ticketRepository.save((new TicketModel(form)));
+            return "index";
         }
-        ticketRepository.save((new TicketModel(form)));
-        return "index";
+
     }
 }
