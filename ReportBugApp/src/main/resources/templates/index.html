@@ -7,13 +7,14 @@
 <body>
 <center>
     <div class="container">
-    <form  th:action="@{/}" th:object="${ticketForm}" method="post">
+        <form th:action="@{/}" th:object="${ticketForm}" method="post">
             <div class="row">
                 <div class="col-25">
                     <label>Author</label>
                 </div>
                 <div class="col-75">
-                    <input placeholder="Name&Lastname" type="text" th:field="*{author}">
+                    <input placeholder="Name & Lastname" type="text"
+                           th:field="*{author}">
                 </div>
             </div>
             <div class="row">
@@ -21,7 +22,8 @@
                     <label>Message</label>
                 </div>
                 <div class="col-75">
-                    <textarea placeholder="Message" type="text" th:field="*{message}" style="height:200px" th:field="*{message}"></textarea>
+                    <textarea placeholder="Message" type="text" th:field="*{message}" style="height:200px"
+                              th:field="*{message}"></textarea>
                 </div>
             </div>
             <div class="row">
@@ -44,7 +46,7 @@ input[type=text], select, textarea {
 }
 
 label {
-
+    font-size: 20px;
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
@@ -82,20 +84,21 @@ width: 70%;
     margin-top: 6px;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
 }
+
 
 </style>
 </body>
