@@ -20,7 +20,7 @@ public class LoginController {
         }
         if (form.getLogin().equals("admin") || form.getPassword().equals("admin")) {
 
-            return "index";
+            return "redirect:/index";
         } else {
 
             model.addAttribute("infoLoginError", "Login Error");
