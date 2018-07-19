@@ -25,7 +25,6 @@ public class MainController {
 
     @PostMapping("/")
     public String index(@ModelAttribute("ticketForm") TicketForm form, TicketModel model) {
-
         ticketRepository.save((new TicketModel(form)));
         return "index";
     }
