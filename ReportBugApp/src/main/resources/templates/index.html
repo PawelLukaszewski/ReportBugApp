@@ -7,8 +7,8 @@
 
 <body>
 <center>
-    <div class="container">
-        <form th:action="@{/index}"  th:object="${ticketForm}" method="post">
+    <div form th:if="${creditInfo} == null" class="container">
+        <form  th:action="@{/index}"  th:object="${ticketForm}" method="post">
             <div class="row">
                 <div class="col-25">
 
@@ -35,17 +35,24 @@
                               th:field="*{message}"></textarea>
                 </div>
             </div>
+
             <div class="row">
                 <input type="submit"  value="send" >
             </div>
-
         </form>
     </div>
 
+    <div th:if="${creditInfo} != null" class="container">
+
+        <center>
+            <h1><span th:text="${infoMessage}" th:style="'color: green'"></span></h1>
+            </br>
+        </center>
+
+    </div>
 
 
 </center>
-
 
 <style>
 * {
@@ -60,6 +67,7 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
 }
+
 
 label {
     font-size: 20px;
@@ -76,6 +84,7 @@ input[type=submit] {
     cursor: pointer;
     float: right;
 }
+
 
 input[type=submit]:hover {
     background-color: #45a049;
@@ -106,6 +115,7 @@ width: 70%;
     display: table;
     clear: both;
 }
+
 
 
 @media screen and (max-width: 600px) {
