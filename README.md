@@ -3,7 +3,7 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Check this Web](#Check this Web)
+* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Status](#status)
 * [Contact](#contact)
@@ -12,7 +12,13 @@
 I created this application to develop my knowledge about Spring Framework, lombok library, HTML5, CSS3 and expand my knowledge about databases.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+
+Login section: 
+![Example screenshot](./screenshot.png)
+
+Error questionnaire section: 
+![Example screenshot](./screenshot2.png)
+
 
 ## Technologies
 * Java 8
