@@ -1,5 +1,5 @@
 # ReportBugApp
-> ReportBugApp is a simple web application.
+ReportBugApp is a simple web application.
 
 ## Table of contents
 * [General info](#general-info)
