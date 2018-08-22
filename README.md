@@ -14,9 +14,12 @@ I created this application to develop my knowledge about Spring Framework, lombo
 ## Screenshots
 
 Login section: 
+
 ![Example screenshot](./screenshot.png)
 
+
 Error questionnaire section: 
+
 ![Example screenshot](./screenshot2.png)
 
 
